@@ -1,1 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Airtime</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container service-page">
+        <div class="header-bar">
+            <a href="dashboard.html"><button class="menu-button">←</button></a>
+            <span>Buy Airtime</span>
+            <span></span>
+        </div>
+        <div class="page-content">
+            <h2>Select Airtime Amount</h2>
+            <form id="buyAirtimeForm" action="#">
+                <div class="form-group">
+                    <label>Choose Network:</label>
+                    <div class="network-selection">
+                        <div>
+                            <input type="radio" id="airtimeNetworkMtn" name="airtimeNetwork" value="MTN" required>
+                            <label for="airtimeNetworkMtn">
+                                <div class="network-logo-circle" style="background-color: #FFD700;">MTN</div>
+                                MTN
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="airtimeNetworkAirtel" name="airtimeNetwork" value="Airtel">
+                            <label for="airtimeNetworkAirtel">
+                                <div class="network-logo-circle" style="background-color: #FF4500;">AIR</div>
+                                Airtel
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="airtimeNetworkGlo" name="airtimeNetwork" value="Glo">
+                            <label for="airtimeNetworkGlo">
+                                <div class="network-logo-circle" style="background-color: #3CB371;">GLO</div>
+                                Glo
+                            </label>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="form-group">
+                    <label for="airtimeAmount">Choose Airtime Amount:</label>
+                    <select id="airtimeAmount" name="airtimeAmount" required>
+                        <option value="">-- Select Amount (Choose Network First) --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="airtimePhoneNumber">Recipient Phone Number:</label>
+                    <input type="text" id="airtimePhoneNumber" name="airtimePhoneNumber" placeholder="e.g., 08012345678" required>
+                </div>
+
+                <button type="submit" class="login-button">Next</button>
+                <a href="dashboard.html"><button type="button" class="login-button back-button">Cancel</button></a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
