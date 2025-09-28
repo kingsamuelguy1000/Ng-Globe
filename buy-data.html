@@ -1,1 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buy Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container service-page">
+        <div class="header-bar">
+            <a href="dashboard.html"><button class="menu-button">←</button></a>
+            <span>Buy Data</span>
+            <span></span>
+        </div>
+        <div class="page-content">
+            <h2>Select Data Plan</h2>
+            <form id="buyDataForm" action="#">
+                <div class="form-group">
+                    <label>Choose Network:</label>
+                    <div class="network-selection">
+                        <div>
+                            <input type="radio" id="dataNetworkMtn" name="dataNetwork" value="MTN" required>
+                            <label for="dataNetworkMtn">
+                                <div class="network-logo-circle" style="background-color: #FFD700;">MTN</div>
+                                MTN
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dataNetworkAirtel" name="dataNetwork" value="Airtel">
+                            <label for="dataNetworkAirtel">
+                                <div class="network-logo-circle" style="background-color: #FF4500;">AIR</div>
+                                Airtel
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="dataNetworkGlo" name="dataNetwork" value="Glo">
+                            <label for="dataNetworkGlo">
+                                <div class="network-logo-circle" style="background-color: #3CB371;">GLO</div>
+                                Glo
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataPlan">Choose Data Plan:</label>
+                    <select id="dataPlan" name="dataPlan" required>
+                        <option value="">-- Select Plan (Choose Network First) --</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="dataPhoneNumber">Recipient Phone Number:</label>
+                    <input type="text" id="dataPhoneNumber" name="dataPhoneNumber" placeholder="e.g., 08012345678" required>
+                </div>
+
+                <button type="submit" class="login-button">Next</button>
+                <a href="dashboard.html"><button type="button" class="login-button back-button">Cancel</button></a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
