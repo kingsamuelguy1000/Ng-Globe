@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fund Wallet</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container service-page">
+        <div class="header-bar">
+            <a href="dashboard.html"><button class="menu-button">←</button></a>
+            <span>Fund Wallet</span>
+            <span></span>
+        </div>
+        <div class="page-content">
+            <h2>Add Money to Your Wallet</h2>
+            <form id="fundWalletForm" action="#">
+                <div class="form-group">
+                    <label for="fundAmount">Enter Amount (₦):</label>
+                    <input type="number" id="fundAmount" name="fundAmount" placeholder="e.g., 1000" min="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Choose Payment Method:</label>
+                    <div class="payment-method-selection">
+                        <div>
+                            <input type="radio" id="paystackMethod" name="paymentMethod" value="Paystack" required>
+                            <label for="paystackMethod">
+                                <div class="payment-logo-circle" style="background-color: #2DCE89;"><i class="fas fa-credit-card"></i></div>
+                                Paystack
+                            </label>
+                        </div>
+                        <div>
+                            <input type="radio" id="flutterwaveMethod" name="paymentMethod" value="Flutterwave">
+                            <label for="flutterwaveMethod">
+                                <div class="payment-logo-circle" style="background-color: #F05166;"><i class="fas fa-wallet"></i></div>
+                                Flutterwave
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="submit" class="login-button">Proceed to Pay</button>
+                <a href="dashboard.html"><button type="button" class="login-button back-button">Cancel</button></a>
+            </form>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
