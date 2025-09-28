@@ -1,1 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="dashboardPage">
+        <div class="header-bar">
+            <button class="menu-button">☰</button>
+            <a href="transactions.html"><button class="transactions-button">Transactions</button></a>
+        </div>
+
+        <div class="dashboard-content-scrollable">
+            <div class="balance-section">
+                <div class="balance-info">
+                    <div class="balance-text">
+                        <span>AVAILABLE BALANCE :</span>
+                        <span class="eye-icon">👁️</span>
+                    </div>
+                    <div class="balance-display">₦0.00</div>
+                </div>
+                <a href="fund-wallet.html"><button class="add-money-button">+ Add Money</button></a>
+            </div>
+
+            <div class="products-section">
+                <h2>Available products</h2>
+                <div class="product-grid">
+                    <a href="ng-transfer.html"><button class="product-item">
+                        <div class="icon-circle" style="background-color: #FFA500;">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <span>NG Transfer</span>
+                    </button></a>
+                    <a href="withdraw-money.html?transferType=bank"><button class="product-item">
+                        <div class="icon-circle" style="background-color: #007bff;">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <span>Bank Transfer</span>
+                    </button></a>
+                    <a href="buy-data.html"><button class="product-item">
+                        <div class="icon-circle" style="background-color: #28a745;">
+                            <i class="fas fa-wifi"></i>
+                        </div>
+                        <span>Buy Data</span>
+                    </button></a>
+
+                    <div class="hidden-products" id="hiddenProducts">
+                        <a href="buy-airtime.html"><button class="product-item">
+                            <div class="icon-circle" style="background-color: #9b59b6;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <span>Buy Airtime</span>
+                        </button></a>
+                        <a href="withdraw-money.html"><button class="product-item">
+                            <div class="icon-circle" style="background-color: #dc3545;">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <span>Withdraw</span>
+                        </button></a>
+                    </div>
+                </div>
+                <button class="more-button" id="moreButton">More..</button>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="dashboard.html"><button class="nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </button></a>
+            <a href="earn-data.html"><button class="nav-item">
+                <i class="fas fa-gift"></i>
+                <span>Earn Data</span>
+            </button></a>
+            <a href="profile.html"><button class="nav-item">
+                <i class="fas fa-user"></i>
+                <span>Me</span>
+            </button></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
 
