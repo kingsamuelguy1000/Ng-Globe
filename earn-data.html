@@ -1,1 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earn Data</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="page-container service-page" id="earnDataPage">
+        <div class="header-bar">
+            <a href="dashboard.html"><button class="menu-button">←</button></a>
+            <span>Earn Data</span>
+            <span></span>
+        </div>
+        <div class="page-content earn-data-content">
+            <div class="data-balance-section new-data-balance">
+                <span>Your Data Balance</span>
+                <div class="data-amount-box">
+                    <span id="dataBalanceDisplay">0 Mb</span>
+                </div>
+                <button id="withdrawDataButton" class="withdraw-data-button">Withdraw Data</button>
+            </div>
 
+            <div class="ads-rewards-section">
+                <div class="ads-watch-header">
+                    <h3 id="adsWatchedCountText">Today Ads to watch (0/30)</h3>
+                    <span class="total-potential-gb" id="totalPotentialGb">1GB</span>
+                </div>
+
+                <div class="reward-progress-bar">
+                    <div class="progress-fill" id="rewardProgressBarFill"></div>
+                    <div class="reward-points">
+                        <div class="point point-1" data-ads="1" data-mb="50"><span>1</span><span>50 Mb</span></div>
+                        <div class="point point-3" data-ads="3" data-mb="100"><span>3</span><span>100 Mb</span></div>
+                        <div class="point point-8" data-ads="8" data-mb="150"><span>8</span><span>150 Mb</span></div>
+                        <div class="point point-14" data-ads="14" data-mb="300"><span>14</span><span>300 Mb</span></div>
+                        <div class="point point-22" data-ads="22" data-mb="500"><span>22</span><span>500 Mb</span></div>
+                        <div class="point point-30" data-ads="30" data-mb="1024"><span>30</span><span>1Gb</span></div>
+                    </div>
+                </div>
+
+                <button class="click-to-watch-button" id="clickToWatchButton">Click to watch</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="withdraw-data-modal-overlay" id="withdrawDataModal" style="display: none;">
+        <div class="withdraw-data-modal-content">
+            <h3>Select Data Plan to Withdraw</h3>
+            <select id="withdrawDataPlanSelect">
+                <option value="">-- Select Plan --</option>
+                <option value="1gb_mtn_daily" data-mb="1024" data-network="MTN">1GB MTN daily</option>
+                <option value="1gb_airtel_daily" data-mb="1024" data-network="Airtel">1GB Airtel daily</option>
+                <option value="500mb_glo_daily" data-mb="500" data-network="Glo">500MB Glo daily</option>
+                <option value="2gb_mtn_2days" data-mb="2048" data-network="MTN">2GB MTN 2days</option>
+                <option value="2gb_airtel_2days" data-mb="2048" data-network="Airtel">2GB Airtel 2days</option>
+                <option value="5gb_mtn_14days" data-mb="5120" data-network="MTN">5GB MTN 14days</option>
+                <option value="5gb_airtel_7days" data-mb="5120" data-network="Airtel">5GB Airtel 7days</option>
+                <option value="10gb_mtn_30days" data-mb="10240" data-network="MTN">10GB MTN 30days</option>
+                <option value="10gb_airtel_30days" data-mb="10240" data-network="Airtel">10GB Airtel 30days</option>
+            </select>
+            <div class="modal-buttons">
+                <button class="select-plan-button" id="selectWithdrawDataPlanButton">Select Plan</button>
+                <button class="close-modal-button" id="closeWithdrawDataModalButton">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ad-playback-overlay" id="adPlaybackOverlay" style="display: none;">
+        <div class="ad-content">
+            <h2>Ad Playing...</h2>
+            <p>Please wait <span id="adCountdownDisplay"></span> seconds.</p>
+            <div class="ad-progress-bar-inner">
+                <div class="ad-progress-fill" id="adProgressBarFill"></div>
+            </div>
+            <div class="dummy-ad-visual">
+                <img src="https://via.placeholder.com/300x200?text=Your+Ad+Here" alt="Ad Content">
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
